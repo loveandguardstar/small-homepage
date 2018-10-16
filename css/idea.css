@@ -89,74 +89,62 @@ img {vertical-align:top; border:none}
 /*图片集合*/
 .pictureWrap {
 	min-width: 1200px;
-	height: 600px;
+	min-height: 340px;
 	background: papayawhip;
+	padding: 130px 0;
 }
 .pictureAlum {
-	position: relative;
+	/*position: relative;*/
 	margin: 0 auto;
-	top: 130px;
+	/*top: 130px;*/
 	width: 836px;
-    height: 325px;
+  	min-height: 325px;
 	background: papayawhip;
 }
-/*.alum1,.alum2,.alum3 {*/
-	/*position: relative;*/
-	/*display: inline-block;*/
-	/*width: 800px;*/
-	/*height: 110px;*/
-	/*top: 30px;*/
-	/*cursor: pointer;*/
-	/*z-index: 1;*/
-/*}*/
-/*.alum2 {*/
-	/*top: -5px;*/
-	/*left: 80px;*/
-/*}*/
-/*.alum3 {*/
-	/*top: -40px;*/
-/*}*/
+.alum1,.alum2,.alum3 {
+	position: relative;
+	display: inline-block;
+	width: 800px;
+	height: 110px;
+	top: 30px;
+	cursor: pointer;
+	z-index: 1;
+}
 .pictureAlum li {
 	display: inline-block;
 	width: 110px;
 	height: 110px;
-	margin-left: 45px;
+	margin-left: 50px;
 	border-radius: 8px;
-	/*transform:rotate(45deg); */
-	/*-ms-transform:rotate(45deg);*/
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
 	font-size: 0;
-
+	box-shadow: 2px 2px 5px gray;
 }
-.pictureAlum li:nth-child(6) {
-	margin-left: 124px;
+.pictureAlum li:nth-child(6),
+.pictureAlum li:nth-child(9n+6) {
+	margin-left: 130px;
 }
-.pictureAlum li:nth-child(n+6) {
+.pictureAlum li:nth-child(n+6){
 	margin-top: -33px;
 }
 .pictureAlum img {
 	display:block;
-    width: 110px;
+  width: 110px;
 	height: 110px;
 	border-radius: 8px;
 	vertical-align: middle;
 }
-.pictureAlum li div {
-	box-shadow:2px 2px 5px gray;
-	border-radius: 8px;
-	transform:rotate(45deg);
-	-ms-transform:rotate(45deg);
-}
 .pictureAlum li span {
 	position:absolute;
-	top: 40%;
-    left: 35%;
+	top: 0;
+  left: -6%;
 	font-size: 14px;
-	color: red;
-	/*transform:rotate(-45deg); */
-	/*-ms-transform:rotate(-45deg);*/
+	color: white;
+	padding:50px;
 	z-index: 10;
 	opacity: 0;
-	filter: alpha(opacity:0);
+	filter: alpha(opacity: 0);
 	transition:opacity 0.5s;
 	-moz-transition:opacity 0.5s;
 	-webkit-transition:opacity 0.5s;
@@ -184,8 +172,8 @@ img {vertical-align:top; border:none}
   margin-left: 130px;
 	width: 199px;
 	height: 199px;
-	transform:rotate(45deg); 
-	-ms-transform:rotate(45deg);
+	transform:rotate(-45deg); 
+	-ms-transform:rotate(-45deg);
 	font-family: ArialMT;
 }
 .oneBox1 img {
@@ -193,6 +181,28 @@ img {vertical-align:top; border:none}
 	height: 199px;
 	border-radius: 10px;
 	box-shadow: 0px 0px 7px 4px #f0dab0;
+}
+.pictureAlum li:hover {
+	cursor: pointer;
+	transform:rotate(360deg) scale(1.5) ;
+	-webkit-transform:rotate(360deg) scale(1.5);  /*兼容Chrome*/
+	-moz-transform:rotate(360deg) scale(1.5);      /*兼容Firefox*/
+	-ms-transform:rotate(360deg) scale(1.5);      /*兼容IE*/
+	-o-transform:rotate(360deg) scale(1.5);        /*兼容Opera*/
+}
+.oneBox1:hover{
+	cursor: pointer;
+	transform:rotate(0deg) scale(1.5) ;
+	-webkit-transform:rotate(0deg) scale(1.5);  /*兼容Chrome*/
+	-moz-transform:rotate(0deg) scale(1.5);      /*兼容Firefox*/
+	-ms-transform:rotate(0deg) scale(1.5);      /*兼容IE*/
+	-o-transform:rotate(0deg) scale(1.5);        /*兼容Opera*/
+	transition: 0.6s;
+}
+.pictureAlum li:hover {
+	position:relative;
+	z-index: 100;
+	transition: 0.6s;
 }
 .oneBox2 {
 	float:left;

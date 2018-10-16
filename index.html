@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<title>good idea</title>
 		<link rel="stylesheet" type="text/css" href="css/idea.css">
+		<script src="js/vue.js"></script>
 	</head> 
 	<body>
 		<header class="headerNav">
@@ -20,7 +21,7 @@
 	        </div>
 	    </header>
 	    <section class="radioWrap">
-	    	<div class="radioBox">
+	    	<div class="radioBox">s
 		    	<span class="ico1"><a><img src="images/ico1.png"></a></span>
 		        <div class="radioAlum">
 		            <div><img src="images/album.png"></div>
@@ -34,25 +35,9 @@
 		<section class="pictureWrap">
 			<div class="pictureAlum">
 				<ul class="alum1">
-					<li><div><img src="images/10.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/11.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/2.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/3.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/4.jpg"><span>hello</span></div></li>
-
-					<li><div><img src="images/5.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/6.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/7.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/8.jpg"><span>hello</span></div></li>
-
-					<li><div><img src="images/10.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/11.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/2.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/3.jpg"><span>hello</span></div></li>
-					<li><div><img src="images/5.jpg"><span>hello</span></div></li>
+					<li v-for="(item, index) in imgLists"><div><img :src="item"><span>hello</span></div></li>
 				</ul>
 			</div>
-
 		</section>
 		<section class="onePageRoundWrap">
 			<div class="onePageRoundBox">
@@ -96,7 +81,32 @@ of learning.I am a designer.but i like am your good designer.</p>
 			</div>
 		</article>
 		<footer class="footerBox">
-			<div><p>© Copyright 2018 by vsery</p><p>湘ICP备 74110号 - 0 </p></div>
+			<div><p>© Copyright 2014 by vsery</p><p>湘ICP备 74110号 - 0 </p></div>
 		</footer>
+		<script>
+			var vm = new Vue({
+				el:'.pictureWrap',
+				data: function() {
+				    return {
+				        imgLists: [
+                            'images/1.jpg',
+                            'images/2.jpg',
+                            'images/3.jpg',
+                            'images/4.jpg',
+                            'images/3.jpg',
+                            'images/5.jpg',
+                            'images/6.jpg',
+                            'images/7.jpg',
+                            'images/8.jpg',
+                            'images/9.jpg',
+                            'images/10.jpg',
+                            'images/11.jpg',
+                            'images/1.jpg',
+                            'images/2.jpg',
+						]
+					}
+				}
+			})
+		</script>
 	</body>
 </html>
